@@ -39,9 +39,7 @@ public class BookService {
     }
 
     public Book findBook(long id) {
-        return bookRepository.findById(id).orElseThrow(
-                () -> new EntityNotFoundException()
-        );
+        return bookRepository.findById(id).orElseThrow(() -> new EntityNotFoundException());
     }
 
     public Book editBook(Book book) {
