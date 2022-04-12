@@ -75,7 +75,7 @@ public class BookCoverService {
 
     private byte[] generateImagePreview(Path filePath) throws IOException {
         try (InputStream is = Files.newInputStream(filePath);
-             BufferedInputStream bis = new BufferedInputStream(is, 1010);
+             BufferedInputStream bis = new BufferedInputStream(is, 1000);
              ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
             BufferedImage image = ImageIO.read(bis);
 
